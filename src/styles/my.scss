@@ -1,0 +1,413 @@
+
+.myCardBase {
+  width: 98%;
+  margin: 15px;
+  padding: 15px;
+  border-radius: 15px !important;
+}
+
+.myFlex {
+  display: flex;
+}
+
+.myFlexBetween {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.myPagination {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.mySearch {
+  margin-left: auto;
+}
+
+.searchSetting {
+  line-height: 28px;
+  font-size: 12px;
+}
+
+
+// table添加border-top
+.el-table {
+  border-top: 1px solid #dee5eb;
+
+  .el-table__fixed {
+    height: 100% !important; //设置高优先，以覆盖内联样式
+  }
+
+  .el-table__body-wrapper {
+    z-index: 2
+  }
+
+  th {
+    background-color: #fbfbfb !important;
+  }
+
+  tr {
+    // 查看更多样式
+    .el-collapse {
+      border: none;
+    }
+
+    .el-collapse-item__header {
+      background: none;
+      border: none;
+      height: 26px;
+      line-height: 26px;
+      font-size: 12px;
+      color: #606266;
+      // padding-left: 20px;
+    }
+
+    .el-collapse-item__wrap {
+      background: none;
+      position: absolute;
+      border: none;
+      z-index: 2;
+      background-color: #F5F7FA;
+      padding: 0 20px 5px;
+      transform: translateX(-20px);
+      border-radius: 0 0 6px 6px;
+      color: #606266;
+
+
+    }
+
+    .el-collapse-item__content {
+      padding-bottom: 0;
+      font-size: 12px;
+      color: #606266;
+
+    }
+
+    .el-collapse-item__arrow {
+      margin: 0 0 0 8px;
+    }
+
+    //json展示插件样式
+    &:hover {
+      .jv-container.jv-light {
+        background-color: #F5F7FA;
+
+        .jv-ellipsis {
+          background-color: #F5F7FA;
+        }
+
+      }
+    }
+
+    .imgBox {
+      height: 60px;
+      width: auto;
+    }
+
+    .jv-container.jv-light {
+      padding: 0 !important;
+      transition: background-color 0.25s ease;
+      font-size: 12px;
+      color: #606266;
+
+      .jv-ellipsis {
+        transition: background-color 0.25s ease;
+        background-color: #ffffff;
+      }
+
+      .jv-code {
+        padding: 0 !important;
+      }
+    }
+  }
+
+}
+
+.fontSize12 {
+  font-size: 12px !important;
+}
+
+.el-select-dropdown__item, .el-cascader-node {
+  font-size: 12px !important;
+  height: 28px;
+  line-height: 28px;
+}
+
+// el-Button 限高
+.el-button {
+  height: 30px;
+}
+
+// 面包屑字体大小
+.el-breadcrumb__item {
+  font-size: 13px;
+}
+
+// 按钮与下拉框按钮间隔
+.el-dropdown + .el-button, .el-button + .el-dropdown, .el-dropdown + .el-dropdown {
+  margin-left: 5px;
+}
+
+
+// 弹出框
+.el-dialog {
+  background-color: #f6f6f6;
+  border-radius: 15px;
+
+  .el-dialog__header {
+    display: flex;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 10px 20px 10px 20px;
+
+    .formDialogOpt {
+      margin-left: auto;
+
+      .el-button {
+        margin-right: 10px;
+      }
+
+      .el-link {
+        width: 30px;
+        font-size: 16px;
+      }
+    }
+
+
+    .formDialogTitle {
+      line-height: 30px;
+      font-size: 16px;
+      color: #303133;
+    }
+
+
+  }
+
+  .el-dialog__body {
+    max-height: 700px;
+    overflow: auto;
+  }
+
+  &.is-fullscreen {
+    .el-dialog__body {
+      max-height: calc(100vh - 70px);
+      overflow: auto;
+    }
+  }
+
+}
+
+@mixin el-input__inner {
+  background-color: #f6f6f6;
+  border-color: #f6f6f6;
+
+  &:hover {
+    border-color: #C0C4CC;
+  }
+
+  &:focus {
+    border-color: #4ba9f2;
+    box-shadow: 0 0 2px #4ba9f2;
+  }
+}
+
+//设置form label样式
+.el-form-item__label {
+  font-size: 12px;
+  color: #909399;
+}
+
+
+.el-drawer {
+  // 抽屉头部高度
+  .el-drawer__header {
+    padding: 10px;
+    margin-bottom: 0;
+
+    .el-link {
+      width: 30px;
+      font-size: 16px;
+    }
+  }
+
+  .el-drawer__body {
+    .searchDrawerForm {
+      margin: 10px 15px 0 15px;
+
+      .el-form {
+        .searchCondition {
+          width: 30%;
+          margin-right: 5%;
+        }
+
+        .searchText, .searchCascader, .searchSelect, .searchDate {
+          width: 65% !important;
+
+          .el-input-number__decrease, .el-input-number__increase {
+            background-color: #ffffff;
+            border: none;
+          }
+
+          .el-input__inner {
+            height: 28px !important;
+          }
+        }
+
+      }
+    }
+
+    .flowDrawerForm {
+      margin: 10px 15px 0 15px;
+
+      .el-form {
+        .flowText, .flowSelect, .flowDate {
+          width: 100% !important;
+
+          .el-input-number__decrease, .el-input-number__increase {
+            background-color: #ffffff;
+            border: none;
+          }
+
+          .el-input__inner {
+            height: 28px !important;
+          }
+        }
+
+      }
+    }
+
+
+  }
+}
+
+.filterTag {
+  .el-tag {
+    margin: 0 0 10px 5px;
+  }
+}
+
+.el-tree {
+  .el-tree > .el-tree-node:after {
+    border-top: none;
+  }
+
+  .el-tree-node {
+    position: relative;
+    padding-left: 16px;
+
+    .el-tree-node:before {
+      content: '';
+      left: 2px;
+      position: absolute;
+      right: auto;
+      border-width: 1px;
+    }
+
+    .el-tree-node:after {
+      content: '';
+      left: 2px;
+      position: absolute;
+      right: auto;
+      border-width: 1px;
+    }
+
+    .el-tree-node:before {
+      border-left: 1px dashed #4ba9f2;
+      bottom: 0px;
+      height: 100%;
+      top: -26px;
+      width: 1px;
+    }
+
+    .el-tree-node:after {
+      border-top: 1px dashed #4ba9f2;
+      height: 20px;
+      top: 12px;
+      width: 18px;
+    }
+  }
+
+  //节点有间隙，隐藏掉展开按钮就好了,如果觉得空隙没事可以删掉
+  .el-tree-node__expand-icon.is-leaf {
+    display: none;
+  }
+
+  .el-tree-node__children {
+    padding-left: 16px;
+  }
+
+  .el-tree-node :last-child:before {
+    height: 38px;
+  }
+
+  .el-tree > .el-tree-node:before {
+    border-left: none;
+  }
+
+  .el-tree > .el-tree-node:after {
+    border-top: none;
+  }
+
+
+  .el-tree .el-tree-node__expand-icon.expanded {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  .el-tree .el-icon-caret-right:before {
+    content: "\e723" !important;
+    font-size: 16px;
+    color: #1389BC;
+    position: absolute;
+    left: -20px;
+    top: -8px;
+  }
+
+  .el-tree .el-tree-node__expand-icon.expanded.el-icon-caret-right:before {
+    content: "\e722" !important;
+    font-size: 16px;
+    color: #1389BC;
+    position: absolute;
+    left: -20px;
+    top: -8px;
+  }
+
+  .el-tree-node__content > .el-tree-node__expand-icon {
+    padding: 0;
+  }
+
+  .el-tree-node__content {
+    padding-left: 0 !important;
+  }
+}
+
+.chartHeard {
+  display: flex;
+  margin-bottom: 10px;
+  height: 30px;
+
+  .chartTitle {
+    min-width: 200px;
+    font-size: 14px;
+    line-height: 28px;
+  }
+
+  .chartSearch {
+    margin-left: auto;
+    display: flex;
+
+    .el-select {
+      margin: 0 5px;
+      height: 28px !important;
+
+      .el-input--mini {
+        .el-input__inner {
+          height: 28px !important;
+        }
+      }
+    }
+  }
+
+}
+
